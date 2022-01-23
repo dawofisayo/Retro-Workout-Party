@@ -1,12 +1,38 @@
 //Array from Dami that has all of the values of everything
-var a = [0, 0];
+var a = //json file
 var lastMove;
 var points = 0;
+var totalPoints = a.length;
 
 var x5, y5, x6, y6, x7, y7, x8, y8, x9, y9, x10, y10, x11, y11, x12, y12, x13, y13, x14, y14, x15, y15, x16, y16;
 
 function updatePositions(something){
-    //Take the array and set each variable to the right thing
+    //We're feeding in one element of our big array, which is a smaller array that stores the infor for one frame
+    x5 = something["keypoints"][5]["x"];
+    y5 = something["keypoints"][5]["y"];
+    x6 = something["keypoints"][6]["x"];
+    y6 = something["keypoints"][6]["y"];
+    x7 = something["keypoints"][7]["x"];
+    y7 = something["keypoints"][7]["y"];
+    x8 = something["keypoints"][8]["x"];
+    y8 = something["keypoints"][8]["y"];
+    x9 = something["keypoints"][9]["x"];
+    y9 = something["keypoints"][9]["y"];
+    x10 = something["keypoints"][10]["x"];
+    y10 = something["keypoints"][10]["y"];
+    x11 = something["keypoints"][11]["x"];
+    y11 = something["keypoints"][11]["y"];
+    x12 = something["keypoints"][12]["x"];
+    y12 = something["keypoints"][12]["y"];
+    x13 = something["keypoints"][13]["x"];
+    y13 = something["keypoints"][13]["y"];
+    x14 = something["keypoints"][14]["x"];
+    y14 = something["keypoints"][15]["y"];
+    x15 = something["keypoints"][15]["x"];
+    y15 = something["keypoints"][15]["y"];
+    x16 = something["keypoints"][16]["x"];
+    y16 = something["keypoints"][16]["y"];
+    
 }
 function getsPoint(something){
     updatePositions(something);
@@ -102,3 +128,4 @@ function thirdWorkoutRight(){
     }
 }
 a.forEach(getsPoint);
+var score = "Your score is: " + (points/totalPoints)*100 + "%";
